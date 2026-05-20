@@ -295,8 +295,8 @@ function Confetti() {
 // --- Landing Popup --- always shows both languages
 const POPUP_TEXTS = {
   question: { en: "Are you Kim Taeyang?", ko: "당신이 김태양인가요?" },
-  yesResponse: { en: "We knew it! Welcome home!", ko: "우리 알았어요! 어서 오세요!" },
-  noResponse: { en: "That's okay! You're still our sunshine!", ko: "괜찮아요! 당신도 우리의 태양이에요!" },
+  yesResponse: { en: "Kim Taeyang, the one and only!", ko: "김태양, 단 하나뿐인 그!" },
+  noResponse: { en: "Welcome to Taeyang's world.", ko: "태양이의 세계에 오신 것을 환영해요." },
   yes: { en: "YES", ko: "네" },
   no: { en: "NO", ko: "아니요" },
 };

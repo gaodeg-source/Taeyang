@@ -14,11 +14,11 @@ export const translations = {
     popup_yes_response: "WE KNEW IT! 🎉✨",
     popup_yes_sub: "Welcome home, Taeyang!",
     popup_no_response: "That's okay! ☀️",
-    popup_no_sub: "You're still our sunshine fan!",
+    popup_no_sub: "Welcome to Taeyang's world.",
 
     // Home
     home_hero_name: "KIM TAEYANG",
-    home_hero_sub: "NEWBEAT • Debuted 2025 • The Sunshine Boy",
+    home_hero_sub: "NEWBEAT • Debuted 2025",
     home_facts_title: "QUICK FACTS",
     home_birthday: "Birthday",
     home_birthday_val: "December 6, 2006",
@@ -60,7 +60,7 @@ export const translations = {
     about_tl: [
       { year: "2023", event: "Revealed as a member of upcoming group HinLOVE (now NEWBEAT)" },
       { year: "2025", event: 'NEWBEAT debuts on March 24 with album "Raw and Rad"' },
-      { year: "2025", event: "Fans discover his sunshine personality on stage and off" },
+      { year: "2025", event: "NEWBEAT gains recognition for their performances and artistry" },
     ],
     about_personality_title: "☀️ SUNNY PERSONALITY",
     about_traits: [
@@ -73,13 +73,13 @@ export const translations = {
 
     // Games Hub
     games_title: "MINI GAMES",
-    games_sub: "Play and celebrate Taeyang's sunshine!",
+    games_sub: "Taeyang mini games",
     game1_name: "합성김태양",
     game1_desc: "Merge sun items into the ultimate Taeyang!",
     game2_name: "Taeyang Quiz",
     game2_desc: "How well do you know Taeyang?",
     game3_name: "Card Flip",
-    game3_desc: "Match the sunshine pairs!",
+    game3_desc: "Match all 8 pairs of Taeyang cards.",
     play_now: "Play Now →",
 
     // Suika Game
@@ -169,7 +169,7 @@ export const translations = {
 
     // Memory Game
     memory_title: "Card Flip",
-    memory_subtitle: "Match all the sunshine pairs!",
+    memory_subtitle: "Find all 8 pairs",
     memory_time: "Time",
     memory_attempts: "Attempts",
     memory_matched: "Matched",

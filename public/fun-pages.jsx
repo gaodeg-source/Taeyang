@@ -247,7 +247,7 @@ function BirthdayPage() {
             <div className="birthday-today">
               <div className="birthday-big">{age}</div>
               <div className="birthday-big-sub">
-                {lang === "en" ? `Sunny turns ${age} today!` : `오늘 써니는 ${age}살이 돼요!`}
+                {lang === "en" ? `Taeyang turns ${age} today.` : `오늘 태양이는 ${age}살이 돼요.`}
               </div>
             </div>
           ) : (
@@ -261,8 +261,8 @@ function BirthdayPage() {
               </div>
               <div className="birthday-line birthday-turning">
                 {lang === "en"
-                  ? `Sunny is turning ${age} this year!`
-                  : `써니는 올해 ${age}살이 돼요!`}
+                  ? `Taeyang turns ${age} this year.`
+                  : `태양이는 올해 ${age}살이 돼요.`}
               </div>
             </React.Fragment>
           )}
