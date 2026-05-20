@@ -76,7 +76,7 @@ const QUIZ_QUESTIONS = [
 ];
 
 function QuizGame({ setRoute }) {
-  const { t, lang } = useLang();
+  const { t, lang, other } = useLang();
   const [idx, setIdx] = React.useState(0);
   const [picked, setPicked] = React.useState(null);
   const [score, setScore] = React.useState(0);
@@ -108,12 +108,8 @@ function QuizGame({ setRoute }) {
     setDone(false);
   };
 
-  const reaction = (() => {
-    if (score === 10) return { en: t.quiz.reactions.perfect, ko: "만점! 당신이 태양이 1호 팬!" };
-    if (score >= 7) return { en: t.quiz.reactions.high, ko: "와, 진정한 태양 팬!" };
-    if (score >= 4) return { en: t.quiz.reactions.mid, ko: "괜찮아요, 연습 중인 팬이에요!" };
-    return { en: t.quiz.reactions.low, ko: "더 알아가 봐요!" };
-  })();
+  const reactionKey = score === 10 ? "perfect" : score >= 7 ? "high" : score >= 4 ? "mid" : "low";
+  const reaction = { primary: t.quiz.reactions[reactionKey], secondary: other.quiz.reactions[reactionKey] };
 
   return (
     <div className="page">
@@ -180,8 +176,8 @@ function QuizGame({ setRoute }) {
               <div className="big">{score}</div>
               <div className="small">/ {total}</div>
             </div>
-            <h2 className="quiz-reaction">{lang === "en" ? reaction.en : reaction.ko}</h2>
-            <div className="quiz-reaction-ko ko">{lang === "en" ? reaction.ko : reaction.en}</div>
+            <h2 className="quiz-reaction">{reaction.primary}</h2>
+            <div className="quiz-reaction-ko ko">{reaction.secondary}</div>
             <button className="btn-primary" onClick={restart}>
               {t.quiz.restart}
             </button>
