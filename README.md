@@ -1,16 +1,18 @@
-# React + Vite
+# Kim Taeyang Fan Site ☀️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Fan website for Kim Taeyang (김태양) of NEWBEAT (뉴비트).
 
-Currently, two official plugins are available:
+## Features
+- **Profile** — photo placeholders, fact cards, Did You Know carousel, career timeline
+- **Games** — Merge Taeyang (합성김태양), Taeyang Quiz, Card Flip memory game
+- **Pet Sunny** — interactive cat/pig mascot with happiness/hunger/energy meters
+- **Birthday Countdown** — live countdown to December 6
+- Bilingual **EN / 한국어** toggle
+- Fully responsive, pastel pink K-pop aesthetic
+- Photo placeholders ready to swap with real photos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Running locally
+```
+npm install
+npm run dev
+```
