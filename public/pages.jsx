@@ -22,8 +22,7 @@ function HomePage() {
             <SunnyMascot size={64} mood="pig" />
           </div>
         </div>
-        <h1 className="hero-name">KIM TAEYANG</h1>
-        <div className="hero-name-ko ko">김태양</div>
+        <h1 className="hero-name">{lang === "en" ? "KIM TAEYANG" : "김태양"}</h1>
         <div className="hero-subtitle">{t.home.subtitle}</div>
       </section>
 
@@ -81,7 +80,6 @@ function HomePage() {
           <div className="timeline-item" key={i}>
             <div className="timeline-year">{item.year}</div>
             <div className="timeline-text">{lang === "en" ? item.en : item.ko}</div>
-            <div className="timeline-text-ko ko">{lang === "en" ? item.ko : item.en}</div>
           </div>
         ))}
       </div>
@@ -96,7 +94,6 @@ function HomePage() {
         {PERSONALITY_TRAITS.map((p, i) => (
           <span className="chip" key={i}>
             {lang === "en" ? p.en : p.ko}
-            <span className="chip-ko ko">{lang === "en" ? p.ko : p.en}</span>
           </span>
         ))}
       </div>
@@ -127,7 +124,6 @@ function FactCard({ icon, labelEn, labelKo, valueEn, valueKo }) {
         <span>{lang === "en" ? labelEn : labelKo}</span>
       </div>
       <div className="fact-value">{lang === "en" ? valueEn : valueKo}</div>
-      <div className="fact-value-ko ko">{lang === "en" ? valueKo : valueEn}</div>
     </div>
   );
 }
@@ -136,16 +132,8 @@ function BioRow({ labelEn, labelKo, v }) {
   const { lang } = useLang();
   return (
     <div className="bio-row">
-      <div className="bio-key">
-        {lang === "en" ? labelEn : labelKo}
-        <span className="bio-key-ko ko">{lang === "en" ? labelKo : labelEn}</span>
-      </div>
-      <div>
-        <div className="bio-value">{lang === "en" ? v.en : v.ko}</div>
-        {v.en !== v.ko && (
-          <div className="bio-value-ko ko">{lang === "en" ? v.ko : v.en}</div>
-        )}
-      </div>
+      <div className="bio-key">{lang === "en" ? labelEn : labelKo}</div>
+      <div className="bio-value">{lang === "en" ? v.en : v.ko}</div>
     </div>
   );
 }
@@ -173,7 +161,6 @@ function DidYouKnowCarousel() {
     <div className="carousel">
       <div className="carousel-fact" key={idx + "-" + lang}>
         <div>{lang === "en" ? fact.en : fact.ko}</div>
-        <div className="carousel-fact-ko ko">{lang === "en" ? fact.ko : fact.en}</div>
       </div>
       <div className="carousel-controls">
         <button className="carousel-btn" onClick={() => { prev(); restartTimer(); }} aria-label="Previous">

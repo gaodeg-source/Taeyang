@@ -302,6 +302,7 @@ const POPUP_TEXTS = {
 };
 
 function LandingPopup({ onClose }) {
+  const { lang } = useLang();
   const [stage, setStage] = React.useState("question");
   const closeRef = React.useRef(null);
 
@@ -324,29 +325,22 @@ function LandingPopup({ onClose }) {
         </div>
         {stage === "question" && (
           <React.Fragment>
-            <div className="popup-question">{POPUP_TEXTS.question.en}</div>
-            <div className="popup-question-ko">{POPUP_TEXTS.question.ko}</div>
+            <div className="popup-question">{POPUP_TEXTS.question[lang]}</div>
             <div className="popup-buttons">
               <button className="btn-primary" onClick={() => choose("yes")}>
-                {POPUP_TEXTS.yes.en} / {POPUP_TEXTS.yes.ko}
+                {POPUP_TEXTS.yes[lang]}
               </button>
               <button className="btn-secondary" onClick={() => choose("no")}>
-                {POPUP_TEXTS.no.en} / {POPUP_TEXTS.no.ko}
+                {POPUP_TEXTS.no[lang]}
               </button>
             </div>
           </React.Fragment>
         )}
         {stage === "yes" && (
-          <React.Fragment>
-            <div className="popup-response">{POPUP_TEXTS.yesResponse.en}</div>
-            <div className="popup-response-ko">{POPUP_TEXTS.yesResponse.ko}</div>
-          </React.Fragment>
+          <div className="popup-response">{POPUP_TEXTS.yesResponse[lang]}</div>
         )}
         {stage === "no" && (
-          <React.Fragment>
-            <div className="popup-response">{POPUP_TEXTS.noResponse.en}</div>
-            <div className="popup-response-ko">{POPUP_TEXTS.noResponse.ko}</div>
-          </React.Fragment>
+          <div className="popup-response">{POPUP_TEXTS.noResponse[lang]}</div>
         )}
       </div>
     </div>

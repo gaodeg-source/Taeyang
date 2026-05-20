@@ -6,24 +6,9 @@ function GamesPage({ setRoute }) {
   const { t, lang } = useLang();
 
   const games = [
-    {
-      id: "game-suika",
-      name: t.games.g1.name,
-      nameOther: lang === "en" ? "합성김태양" : "Merge Taeyang",
-      desc: t.games.g1.desc,
-    },
-    {
-      id: "game-quiz",
-      name: t.games.g2.name,
-      nameOther: lang === "en" ? "태양 퀴즈" : "Taeyang Quiz",
-      desc: t.games.g2.desc,
-    },
-    {
-      id: "game-memory",
-      name: t.games.g3.name,
-      nameOther: lang === "en" ? "카드 뒤집기" : "Card Flip",
-      desc: t.games.g3.desc,
-    },
+    { id: "game-suika", name: t.games.g1.name, desc: t.games.g1.desc },
+    { id: "game-quiz",  name: t.games.g2.name, desc: t.games.g2.desc },
+    { id: "game-memory",name: t.games.g3.name, desc: t.games.g3.desc },
   ];
 
   return (
@@ -47,7 +32,6 @@ function GamesPage({ setRoute }) {
             />
             <div className="game-card-body">
               <h3 className="game-card-title">{g.name}</h3>
-              <div className="game-card-title-ko ko">{g.nameOther}</div>
               <p className="game-card-desc">{g.desc}</p>
               <button className="btn-primary" onClick={() => setRoute(g.id)}>
                 {t.games.play}

@@ -76,7 +76,7 @@ const QUIZ_QUESTIONS = [
 ];
 
 function QuizGame({ setRoute }) {
-  const { t, lang, other } = useLang();
+  const { t, lang } = useLang();
   const [idx, setIdx] = React.useState(0);
   const [picked, setPicked] = React.useState(null);
   const [score, setScore] = React.useState(0);
@@ -109,7 +109,7 @@ function QuizGame({ setRoute }) {
   };
 
   const reactionKey = score === 10 ? "perfect" : score >= 7 ? "high" : score >= 4 ? "mid" : "low";
-  const reaction = { primary: t.quiz.reactions[reactionKey], secondary: other.quiz.reactions[reactionKey] };
+  const reaction = t.quiz.reactions[reactionKey];
 
   return (
     <div className="page">
@@ -135,7 +135,6 @@ function QuizGame({ setRoute }) {
 
           <div className="quiz-card">
             <div className="quiz-question">{lang === "en" ? q.qEn : q.qKo}</div>
-            <div className="quiz-question-ko ko">{lang === "en" ? q.qKo : q.qEn}</div>
 
             <div className="quiz-options">
               {(lang === "en" ? q.optionsEn : q.optionsKo).map((opt, i) => {
@@ -176,8 +175,7 @@ function QuizGame({ setRoute }) {
               <div className="big">{score}</div>
               <div className="small">/ {total}</div>
             </div>
-            <h2 className="quiz-reaction">{reaction.primary}</h2>
-            <div className="quiz-reaction-ko ko">{reaction.secondary}</div>
+            <h2 className="quiz-reaction">{reaction}</h2>
             <button className="btn-primary" onClick={restart}>
               {t.quiz.restart}
             </button>
