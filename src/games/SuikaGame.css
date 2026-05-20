@@ -1,0 +1,221 @@
+.suika-page {
+  background: radial-gradient(ellipse at 50% 0%, #2d1b69 0%, var(--navy) 70%);
+  min-height: 100vh;
+}
+
+.suika-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px clamp(8px, 3vw, 16px) 60px;
+}
+
+.suika-header {
+  text-align: center;
+  margin-bottom: 24px;
+  animation: fadeInUp 0.5s ease;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 12px;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--gold); }
+
+.suika-title {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: clamp(32px, 7vw, 56px);
+  color: var(--gold);
+  text-shadow: var(--glow);
+  margin-bottom: 4px;
+}
+
+.suika-subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Layout */
+.suika-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Sidebar */
+.suika-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 100px;
+}
+
+.score-box, .next-box {
+  background: rgba(45,27,105,0.5);
+  border: 1px solid rgba(255,215,0,0.2);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+.score-label {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.score-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  color: var(--white);
+}
+
+.next-emoji {
+  font-size: 32px;
+  margin: 4px 0;
+}
+
+.next-name {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.items-legend {
+  background: rgba(45,27,105,0.5);
+  border: 1px solid rgba(255,215,0,0.15);
+  border-radius: 12px;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.legend-emoji { font-size: 16px; }
+.legend-pts { font-size: 11px; color: var(--text-muted); }
+
+/* Canvas */
+.suika-canvas-wrap {
+  flex: 0 0 auto;
+}
+
+.suika-canvas-inner {
+  position: relative;
+  width: min(360px, calc(100vw - 140px));
+  height: min(520px, calc((100vw - 140px) * 520 / 360));
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(13,13,43,0.9) 0%, rgba(26,26,78,0.95) 100%);
+  border: 2px solid rgba(255,215,0,0.25);
+  box-shadow: 0 0 40px rgba(255,215,0,0.1), inset 0 0 60px rgba(0,0,0,0.3);
+  cursor: crosshair;
+}
+
+.suika-canvas-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.suika-canvas-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Overlays */
+.suika-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(13,13,43,0.85);
+  backdrop-filter: blur(4px);
+  border-radius: 14px;
+  animation: fadeIn 0.3s ease;
+  z-index: 10;
+}
+
+.suika-overlay.gameover {
+  background: rgba(13,13,43,0.9);
+}
+
+.overlay-content {
+  text-align: center;
+  padding: 24px;
+}
+
+.overlay-emoji { font-size: 48px; margin-bottom: 12px; }
+.overlay-text { color: var(--text-muted); font-size: 14px; margin-bottom: 8px; }
+.overlay-cta {
+  color: var(--gold);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  animation: pulse-glow 2s ease infinite;
+}
+
+.gameover-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  color: #FF6B6B;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.gameover-sub {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.gameover-score {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: var(--gold);
+  text-shadow: var(--glow);
+  margin-bottom: 20px;
+}
+
+.restart-btn {
+  background: linear-gradient(135deg, var(--gold), var(--orange));
+  color: var(--navy);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.restart-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255,165,0,0.5);
+}
+
+@media (max-width: 620px) {
+  .suika-layout { flex-direction: column; align-items: center; }
+  .suika-sidebar { flex-direction: row; flex-wrap: wrap; justify-content: center; min-width: unset; width: 100%; }
+  .score-box, .next-box { flex: 1; min-width: 80px; }
+  .items-legend { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .suika-canvas-inner {
+    width: min(360px, 96vw);
+    height: min(520px, calc(96vw * 520 / 360));
+  }
+}

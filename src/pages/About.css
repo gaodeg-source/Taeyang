@@ -1,0 +1,260 @@
+.about-page {
+  background: linear-gradient(180deg, var(--navy) 0%, #120e2e 100%);
+}
+
+.about-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 60px) clamp(16px, 5vw, 24px) 80px;
+}
+
+.page-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(40px, 8vw, 80px);
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 60px;
+  text-shadow: var(--glow);
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Profile card */
+.profile-card {
+  background: linear-gradient(135deg, rgba(45,27,105,0.5) 0%, rgba(26,26,78,0.7) 100%);
+  border: 1px solid rgba(255,215,0,0.2);
+  border-radius: 24px;
+  padding: clamp(20px, 5vw, 40px);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: clamp(20px, 4vw, 40px);
+  margin-bottom: 60px;
+  animation: fadeInUp 0.7s ease 0.1s both;
+}
+
+.profile-sun-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.big-sun-wrap {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 8px;
+}
+
+.big-sun-rays {
+  position: absolute;
+  inset: -15px;
+  background: conic-gradient(
+    transparent 0deg, rgba(255,215,0,0.5) 4deg, transparent 8deg,
+    transparent 22deg, rgba(255,215,0,0.5) 26deg, transparent 30deg,
+    transparent 44deg, rgba(255,215,0,0.5) 48deg, transparent 52deg,
+    transparent 66deg, rgba(255,215,0,0.5) 70deg, transparent 74deg,
+    transparent 88deg, rgba(255,215,0,0.5) 92deg, transparent 96deg,
+    transparent 110deg, rgba(255,215,0,0.5) 114deg, transparent 118deg,
+    transparent 132deg, rgba(255,215,0,0.5) 136deg, transparent 140deg,
+    transparent 154deg, rgba(255,215,0,0.5) 158deg, transparent 162deg,
+    transparent 176deg, rgba(255,215,0,0.5) 180deg, transparent 184deg,
+    transparent 198deg, rgba(255,215,0,0.5) 202deg, transparent 206deg,
+    transparent 220deg, rgba(255,215,0,0.5) 224deg, transparent 228deg,
+    transparent 242deg, rgba(255,215,0,0.5) 246deg, transparent 250deg,
+    transparent 264deg, rgba(255,215,0,0.5) 268deg, transparent 272deg,
+    transparent 286deg, rgba(255,215,0,0.5) 290deg, transparent 294deg,
+    transparent 308deg, rgba(255,215,0,0.5) 312deg, transparent 316deg,
+    transparent 330deg, rgba(255,215,0,0.5) 334deg, transparent 338deg,
+    transparent 352deg, rgba(255,215,0,0.5) 356deg, transparent 360deg
+  );
+  border-radius: 50%;
+  animation: spin-slow 12s linear infinite;
+}
+
+.big-sun-core {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.profile-stage {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.profile-group {
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.profile-section-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-table tr {
+  border-bottom: 1px solid rgba(255,215,0,0.08);
+}
+
+.profile-table tr:last-child {
+  border-bottom: none;
+}
+
+.td-label {
+  padding: 10px 0;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  width: 40%;
+  vertical-align: top;
+}
+
+.td-val {
+  padding: 10px 0;
+  font-size: 15px;
+  color: var(--white);
+  line-height: 1.4;
+}
+
+/* Timeline */
+.timeline-section {
+  margin-bottom: 60px;
+  animation: fadeInUp 0.7s ease 0.2s both;
+}
+
+.section-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(24px, 5vw, 40px);
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-bottom: 32px;
+  text-shadow: var(--glow);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 80px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 40px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+}
+
+.tl-item {
+  position: relative;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.tl-year {
+  position: absolute;
+  left: -80px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: var(--orange);
+  letter-spacing: 1px;
+  width: 60px;
+  text-align: right;
+  padding-top: 2px;
+}
+
+.tl-dot {
+  position: absolute;
+  left: -46px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(255,215,0,0.6);
+}
+
+.tl-text {
+  background: rgba(45,27,105,0.4);
+  border: 1px solid rgba(255,215,0,0.15);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--white);
+  flex: 1;
+}
+
+/* Personality */
+.personality-section {
+  animation: fadeInUp 0.7s ease 0.3s both;
+}
+
+.traits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.trait-chip {
+  background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,165,0,0.05));
+  border: 1px solid rgba(255,215,0,0.25);
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-size: 15px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeInUp 0.5s ease both;
+  transition: all 0.2s;
+}
+
+.trait-chip:hover {
+  border-color: var(--gold);
+  background: rgba(255,215,0,0.15);
+  transform: translateY(-2px);
+}
+
+.trait-star {
+  color: var(--gold);
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .profile-card { grid-template-columns: 1fr; }
+  .profile-sun-col { border-bottom: 1px solid rgba(255,215,0,0.1); padding-bottom: 24px; }
+  .timeline { padding-left: 60px; }
+  .tl-year { left: -60px; font-size: 16px; width: 45px; }
+  .tl-dot { left: -32px; }
+}
+
+@media (max-width: 480px) {
+  .timeline { padding-left: 52px; }
+  .tl-year { left: -52px; font-size: 14px; width: 38px; }
+  .tl-dot { left: -28px; }
+  .tl-text { padding: 12px 14px; font-size: 14px; }
+  .traits-grid { gap: 8px; }
+  .trait-chip { padding: 10px 14px; font-size: 14px; }
+}
