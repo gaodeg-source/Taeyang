@@ -4,7 +4,7 @@
 
 const TRANSLATIONS = {
   en: {
-    nav: { home: "Profile", games: "Games", pet: "Pet Sunny", birthday: "Birthday" },
+    nav: { home: "Profile", games: "Games", pet: "Pet 태똥", birthday: "Birthday" },
     popup: {
       question: "Are you Kim Taeyang?",
       yes: "YES",
@@ -44,8 +44,8 @@ const TRANSLATIONS = {
       photoLabel: "Photo coming soon",
     },
     pet: {
-      title: "Pet Sunny",
-      subtitle: "Sunny's part cat, part little piggy",
+      title: "Pet 태똥",
+      subtitle: "태똥's part cat, part little piggy",
       petAction: "Pet",
       feedFish: "Cat treat",
       feedCookie: "Cookie",
@@ -128,7 +128,7 @@ const TRANSLATIONS = {
     },
   },
   ko: {
-    nav: { home: "프로필", games: "게임", pet: "써니 펫", birthday: "생일" },
+    nav: { home: "프로필", games: "게임", pet: "태똥 펫", birthday: "생일" },
     popup: {
       question: "혹시 김태양인가요?",
       yes: "네",
@@ -168,8 +168,8 @@ const TRANSLATIONS = {
       photoLabel: "사진 준비 중",
     },
     pet: {
-      title: "써니 펫",
-      subtitle: "써니는 고양이 + 작은 돼지",
+      title: "태똥 펫",
+      subtitle: "태똥이는 고양이 + 작은 돼지",
       petAction: "쓰다듬기",
       feedFish: "고양이 간식",
       feedCookie: "쿠키",
